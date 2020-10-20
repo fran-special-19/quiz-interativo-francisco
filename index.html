@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz interativo - JavaScript</title>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-dark bg-success">
+      <span class="navbar-brand mb-0 h1">Quiz interativo - JavaScript</span>
+    </nav>
+    <main class="container">
+      <form class="quiz-form">
+        <h1>O quanto você sabe de JavaScript? Faça o teste!</h1>
+        <div id="pergunta">
+          <h3>Pergunta 1</h3>
+          <p>Quando o JavaScript foi lançado e quem de qual empresa criou essa linguagem?</p>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta1-alternativa-a" name="resposta1" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta1-alternativa-a">1991/Bill Gates, da Microsoft</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta1-alternativa-b" name="resposta1" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta1-alternativa-b">1993/Bradon Eich, da Netscape</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta1-alternativa-c" name="resposta1" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta1-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 2</h3>
+          <p>Com qual objetivo inicial teve essa linguagem?</p>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta2-alternativa-a" name="resposta2" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta2-alternativa-a">Ser a linguagem para o lado do cliente (navegadores).</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta2-alternativa-b" name="resposta2" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta2-alternativa-b">Ser a linguagem para o lado do servidor.</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta2-alternativa-c" name="resposta2" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta2-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 3</h3>
+          <p>De qual motor JavaScript o Node.js foi baseado?</p>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta3-alternativa-a" name="resposta3" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta3-alternativa-a">V8, do Google Chrome.</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta3-alternativa-b" name="resposta3" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta3-alternativa-b">Chackra, do Microsoft Edge.</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta3-alternativa-c" name="resposta3" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta3-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 4</h3>
+          <p>Escolha a alternativa que contém os exemplos de frameworks escritos em JavaScript.</p>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta4-alternativa-a" name="resposta4" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta4-alternativa-a">Django, Tkinter e Kivy.</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta4-alternativa-b" name="resposta4" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta4-alternativa-b">Angular, React e jQuery.</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta4-alternativa-c" name="resposta4" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta4-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 5</h3>
+          <p>Qual será o resultado desse código?</p>
+          <pre>
+            <code>
+              const n1 = 4
+              const n2 = 6
+              const res = n1 + n2 / 4
+              console.log(res)
+            </code>
+          </pre>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta5-alternativa-a" name="resposta5" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta5-alternativa-a">2.5</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta5-alternativa-b" name="resposta5" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta5-alternativa-b">5.5</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta5-alternativa-c" name="resposta5" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta5-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 6</h3>
+          <p>Qual será o resultado desse código?</p>
+          <pre>
+            <code>
+              const products = [
+                {id: 1, name: 'Chocolate em barra'},
+                {id: 2, name: 'Pizza'},
+                {id: 3, name: 'BIS'}
+              ]
+
+              console.log(products[1].name)
+            </code>
+          </pre>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta6-alternativa-a" name="resposta6" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta6-alternativa-a">'Pizza'</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta6-alternativa-b" name="resposta6" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta6-alternativa-b">2</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta6-alternativa-c" name="resposta6" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta6-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 7</h3>
+          <p>Qual será o resultado desse código?</p>
+          <pre>
+            <code>
+              let num = 0
+              for (let i = 1; i <= 4; i++) {
+                for (let j = 1; j <= 4; j++) {
+                  const isBothEven = i % 2 === 0 && j % 2 === 0
+                  if (isBothEven) {
+                    num += 2
+                  }
+                }
+              }
+            </code>
+          </pre>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta7-alternativa-a" name="resposta7" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta7-alternativa-a">8</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta7-alternativa-b" name="resposta7" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta7-alternativa-b">16</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta7-alternativa-c" name="resposta7" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta7-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <div id="pergunta">
+          <h3>Pergunta 8</h3>
+          <p>Qual será o resultado desse código?</p>
+          <pre>
+            <code>
+              const form = document.querySelector('formulario')
+              const usernameInput = form.username.value
+              // a constante usernameInput armazena 'Francisco2020'
+              const isAValidUsername = /^[a-zA-Z0-9]{6,14}$/.test(usernameInput)
+
+              if (isAValidUsername) {
+                console.log('O nome de usuário é válido')
+              } else {
+                console.log('O nome de usuário é inválido')
+              }
+            </code>
+          </pre>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta8-alternativa-a" name="resposta8" class="custom-control-input" value="A">
+            <label class="custom-control-label" for="pergunta8-alternativa-a">'O nome de usuário é inválido'</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta8-alternativa-b" name="resposta8" class="custom-control-input" value="B">
+            <label class="custom-control-label" for="pergunta8-alternativa-b">'O nome de usuário é válido'</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="pergunta8-alternativa-c" name="resposta8" class="custom-control-input" value="C">
+            <label class="custom-control-label" for="pergunta8-alternativa-c">Nenhuma das alternativas anteriores.</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+      <div class="resultados"></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
