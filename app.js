@@ -22,14 +22,26 @@ Link do repositório do curso: https://github.com/roger-melo-treinamentos/curso-
 Ps: se você não conseguiu fazer tudo o que foi pedido acima, abra a issue mesmo assim =)
 */
 
-const correctAnswers = ['B', 'A', 'A', 'B', 'B', 'A', 'A', 'B']
+// const correctAnswers = ['B', 'A', 'A', 'B', 'B', 'A', 'A', 'B']
+
+// Variáveis a serem utilizadas
+const correctAnswers = ['C', 'C', 'D', 'A', 'B', 'B', 'D', 'A']
 const form = document.querySelector('.quiz-form')
 const results = document.querySelector('.resultados')
+const resultsInPercent = results.querySelector('.resultado')
 
-form.addEventListener('submit', event => {
+/**
+ * Checa os resultados em pontos
+ * @param {submit} event Evento do formulário cujo foi submetido
+ */
+const checkResults = event => {
+  // Previne o formulário de ser carregado quando o botão de envio for clicado
   event.preventDefault()
-  let points = 0
-  let htmlMessage = ''
+  
+  let points = 0 // Armazena o número de questões que o usuário acertou
+  const answers = correctAnswers.length // Armazena a quantidade de questões
+
+  // Array que armazena as respostas do usuário 
   const userAnswers = [
     form.resposta1.value,
     form.resposta2.value,
@@ -40,18 +52,31 @@ form.addEventListener('submit', event => {
     form.resposta7.value,
     form.resposta8.value
   ]
-  userAnswers.forEach((answer, index) => {
+
+  /* Função de callback que checa a resposta correta
+     e adiciona um ponto se isso acontecer */
+  const checkCorrectAnswer = (answer, index) => {
     const correctAnswer = answer === correctAnswers[index]
     if (correctAnswer) {
       points += 1
     }
-  });
-  let finalScore = (100 * points) / correctAnswers.length
-  htmlMessage += `
-  <p>Sua pontuação:</p>
-  <h1>${finalScore}%</h1>
-  <p>Questões acertadas: ${points}</p>
-  <p>Obrigado por jogar :)</p>
-  `
-  results.innerHTML = htmlMessage
-})
+  }
+
+  // O array 'userAnswers' é iterado com a função declarada anteriormente
+  userAnswers.forEach(checkCorrectAnswer)
+  // Armazena o resultado final em porcentagem
+  const finalScore = (100 * points) / answers
+
+  scrollTo(0, 0) // Rola a página para cima para anunciar a pontuação
+
+  /* Remove a classe d-none e adiciona d-block para exibir a pontuação
+     para o usuário */
+  results.classList.remove('d-none')
+  results.classList.add('d-block')
+
+  // Armazena a pontuação na propriedade innerHTML da div de resultados
+  resultsInPercent.innerHTML = `${finalScore}%`
+}
+
+// Executa o evento quando o formulário for submetido
+form.addEventListener('submit', checkResults)
