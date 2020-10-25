@@ -62,6 +62,16 @@ const checkResults = event => {
     }
   }
 
+  // função para contar os pontos que o usuário fez
+  const timerFunction = () => {
+    if (counter === finalScore) {
+      clearInterval(timer)
+      return;
+    }
+    counter += 0.5
+    resultsInPercent.innerHTML = `${counter}%`
+  }
+
   // O array 'userAnswers' é iterado com a função declarada anteriormente
   userAnswers.forEach(checkCorrectAnswer)
   // Armazena o resultado final em porcentagem
@@ -74,8 +84,10 @@ const checkResults = event => {
   results.classList.remove('d-none')
   results.classList.add('d-block')
 
-  // Armazena a pontuação na propriedade innerHTML da div de resultados
-  resultsInPercent.innerHTML = `${finalScore}%`
+  let counter = 0 // seta o contador para zero
+
+  // timer que armazena a função do setInterval
+  const timer = setInterval(timerFunction, 1)
 }
 
 // Executa o evento quando o formulário for submetido
